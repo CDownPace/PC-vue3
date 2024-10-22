@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cz-git": "^1.9.4",
     "element-plus": "^2.8.3",
     "nprogress": "^0.2.0",
     "vue": "^3.4.37",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@types/node": "^22.5.5",
     "@vitejs/plugin-vue": "^5.1.2",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory, Router } from 'vue-router'
-
+import Layout from '@/layout/index.vue'
 
 interface extendRoute {
   hidden?: boolean
@@ -21,7 +21,7 @@ export const constantRoutes: Array<RouteRecordRaw & extendRoute> = [
   {
     path: '/',
     name: 'layout',
-    component: () => import('../views/home/index.vue'),
+    component: Layout,
     redirect: '/home',
     meta: { title: '首页', icon: 'House' },
     children: [

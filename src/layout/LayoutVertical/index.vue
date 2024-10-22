@@ -1,6 +1,12 @@
-<template>kkk
-<Main />
+<template>
+  <Sidebar />
+  <div>
+
+    <Main />
+  </div>
 </template>
+
 <script lang="ts" setup>
-import Main from '../components/Main/index.vue'
+import Sidebar from '../components/Sidebar/index'
+import Main from '../components/Main/index'
 </script>

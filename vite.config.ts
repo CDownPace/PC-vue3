@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 
-function resolve(dir) {
+function resolve(dir:any) {
   return path.join(__dirname, '.', dir)
 }
 

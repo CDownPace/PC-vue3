@@ -8,4 +8,17 @@
   .el-scrollbar {
     height: 100%;
   }
+  .sidebar-container {
+    transition: width 0.28s;
+    width: $sideBarWidth !important;
+    background-color: $menuBg;
+    height: 100vh;
+    position: fixed;
+    font-size: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 98;
+    overflow: hidden;
+  }
 }

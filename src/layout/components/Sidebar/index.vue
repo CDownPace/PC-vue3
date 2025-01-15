@@ -1,8 +1,9 @@
 <template>
-  <div class="sidebar-container" ><el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
+  <div class="sidebar-container" >
+    <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
     <el-radio-button :value="false">expand</el-radio-button>
     <el-radio-button :value="true">collapse</el-radio-button>
-  </el-radio-group>
+  </el-radio-group> -->
   <el-scrollbar wrap-class="scrollbar-wrapper">
   <el-menu
     default-active="2"
@@ -41,7 +42,8 @@
       <el-icon><setting /></el-icon>
       <template #title>Navigator Four</template>
     </el-menu-item>
-  </el-menu></el-scrollbar></div>
+  </el-menu>
+  </el-scrollbar></div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -68,5 +70,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 .sidebar-container {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    min-width: 250px
   }
 </style>

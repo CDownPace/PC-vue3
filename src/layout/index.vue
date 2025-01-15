@@ -21,5 +21,16 @@
   .g-container-layout {
     height: 100%;
     width: 100%;
+    display: flex
+  }
+  .main-container {
+      display: flex;
+      flex: 1;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+  .g-container-layout {
+    height: 100%;
+    width: 100%;
   }
   </style>

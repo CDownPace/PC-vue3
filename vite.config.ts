@@ -10,6 +10,13 @@ function resolve(dir:any) {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "./src/styles/index.scss" as *;`,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': resolve('src'),

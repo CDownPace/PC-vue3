@@ -1,76 +1,63 @@
 <template>
-  <div class="sidebar-container" >
-    <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :value="false">expand</el-radio-button>
-    <el-radio-button :value="true">collapse</el-radio-button>
-  </el-radio-group> -->
-  <el-scrollbar wrap-class="scrollbar-wrapper">
-  <el-menu
-    default-active="2"
-    class="el-menu-vertical-demo"
-    :collapse="isCollapse"
-    @open="handleOpen"
-    @close="handleClose"
-  >
-    <el-sub-menu index="1">
-      <template #title>
-        <el-icon><location /></el-icon>
-        <span>Navigator One</span>
-      </template>
-      <el-menu-item-group>
-        <template #title><span>Group One</span></template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item two</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="Group Two">
-        <el-menu-item index="1-3">item three</el-menu-item>
-      </el-menu-item-group>
-      <el-sub-menu index="1-4">
-        <template #title><span>item four</span></template>
-        <el-menu-item index="1-4-1">item one</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="2">
-      <el-icon><icon-menu /></el-icon>
-      <template #title>Navigator Two</template>
-    </el-menu-item>
-    <el-menu-item index="3" disabled>
-      <el-icon><document /></el-icon>
-      <template #title>Navigator Three</template>
-    </el-menu-item>
-    <el-menu-item index="4">
-      <el-icon><setting /></el-icon>
-      <template #title>Navigator Four</template>
-    </el-menu-item>
-  </el-menu>
-  </el-scrollbar></div>
+  <div class="sidebar-container">
+    <el-scrollbar wrap-class="scrollbar-wrapper">
+      <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
+        @close="handleClose">
+
+        <template v-for="route, index in allRouterData" :key="route.path" :item="route">
+          <el-sub-menu :index="route.path">
+            <template #title>
+              <el-icon>
+                <component :is=route?.meta.icon></component>
+              </el-icon>
+              <span>{{ route.meta.title }}</span>
+            </template>
+            <template v-for="routeChild in route.children" :key="routeChild.path"
+              :item="routeChild">
+              <el-sub-menu :index="routeChild.path">
+                <template #title><span>{{ routeChild.meta.title }}</span></template>
+
+                <template v-if="routeChild.children">
+                  <template v-for="routeItem in routeChild.children" :key="routeItem.path" :item="routeChild">
+
+                    <el-menu-item :index="routeItem?.path">{{ routeItem.meta.title }}</el-menu-item>
+                  </template>
+                </template>
+
+              </el-sub-menu>
+            </template>
+          </el-sub-menu>
+        </template>
+
+      </el-menu>
+    </el-scrollbar>
+  </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@element-plus/icons-vue'
+import allRouter from '../../../routers/sideBarRouter'
+import { computed } from 'vue'
 
-const isCollapse = ref(true)
+const isCollapse = ref(false)
+const allRouterData = computed(() => allRouter)
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
+
 </script>
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
 }
+
 .sidebar-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 250px
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 250px
+}
 </style>

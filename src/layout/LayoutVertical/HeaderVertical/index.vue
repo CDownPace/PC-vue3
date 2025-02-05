@@ -1,6 +1,6 @@
 <template>
   <div class="footer-layout">
-    <span href="/" target="_blank"> 2111</span>
+    <span href="/" target="_blank"> 旅行页面</span>
   </div>
 </template>
 

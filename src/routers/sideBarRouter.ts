@@ -22,18 +22,32 @@ const allRouter = [
         component: () => import('@/views/login/index.vue'),
         name: 'clipboard',
         meta: { title: '云南', roles: ['other'], icon: 'MenuIcon' },
-        children:[
+        children: [
           {
-            path: '/system/user',
+            path: '/system/dali',
             component: () => import('@/views/errorPages/404.vue'),
             name: 'user',
             meta: { title: '大理', icon: 'MenuIcon' },
           },
           {
-            path: '/system/iling',
+            path: '/system/liling',
             component: () => import('@/views/errorPages/404.vue'),
             name: 'user',
             meta: { title: '丽江', icon: 'MenuIcon' },
+            children: [
+              {
+                path: '/system/lijiang/lijiangguzhen',
+                component: () => import('@/views/errorPages/404.vue'),
+                name: 'user',
+                meta: { title: '丽江古城', icon: 'MenuIcon' },
+              },
+              {
+                path: '/system/lijiang/shuhe',
+                component: () => import('@/views/errorPages/404.vue'),
+                name: 'user',
+                meta: { title: '束河古镇', icon: 'MenuIcon' },
+              },
+            ]
           },
         ]
       },

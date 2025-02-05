@@ -1,8 +1,8 @@
 <template>
   <div class="sidebar-container">
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
-        @close="handleClose">
+      <el-menu default-active="2" active-text-color="#409eff" background-color="#304156" class="el-menu-vertical-demo"
+        text-color="#bfcbd9" :collapse="isCollapse" @open="handleOpen" @close="handleClose">
 
         <template v-for="route, index in allRouterData" :key="route.path" :item="route">
           <el-sub-menu :index="route.path">
@@ -12,7 +12,7 @@
               </el-icon>
               <span>{{ route.meta.title }}</span>
             </template>
-            <template v-for="routeChild in route.children" :key="routeChild.path"
+            <!-- <template v-for="routeChild in route.children" :key="routeChild.path"
               :item="routeChild">
               <el-sub-menu :index="routeChild.path">
                 <template #title><span>{{ routeChild.meta.title }}</span></template>
@@ -25,7 +25,8 @@
                 </template>
 
               </el-sub-menu>
-            </template>
+            </template> -->
+            <SubItem :item="route" />
           </el-sub-menu>
         </template>
 
@@ -37,9 +38,11 @@
 import { ref } from 'vue'
 import allRouter from '../../../routers/sideBarRouter'
 import { computed } from 'vue'
+import SubItem from '../SubMenu/SubItem.vue'
 
 const isCollapse = ref(false)
 const allRouterData = computed(() => allRouter)
+console.log('allRouterData---', allRouterData)
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
@@ -50,8 +53,8 @@ const handleClose = (key: string, keyPath: string[]) => {
 </script>
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
+  /* width: 200px; */
+  height: 100vh;
 }
 
 .sidebar-container {

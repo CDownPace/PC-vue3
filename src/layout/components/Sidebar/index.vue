@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-container">
     <el-scrollbar wrap-class="scrollbar-wrapper">
-      <el-menu default-active="2" active-text-color="#409eff" background-color="#304156" class="el-menu-vertical-demo"
+      <el-menu default-active="2" :unique-opened="true" active-text-color="#409eff" background-color="#304156" class="el-menu-vertical-demo"
         text-color="#bfcbd9" :collapse="isCollapse" @open="handleOpen" @close="handleClose">
 
         <template v-for="route, index in allRouterData" :key="route.path" :item="route">
@@ -12,20 +12,6 @@
               </el-icon>
               <span>{{ route.meta.title }}</span>
             </template>
-            <!-- <template v-for="routeChild in route.children" :key="routeChild.path"
-              :item="routeChild">
-              <el-sub-menu :index="routeChild.path">
-                <template #title><span>{{ routeChild.meta.title }}</span></template>
-
-                <template v-if="routeChild.children">
-                  <template v-for="routeItem in routeChild.children" :key="routeItem.path" :item="routeChild">
-
-                    <el-menu-item :index="routeItem?.path">{{ routeItem.meta.title }}</el-menu-item>
-                  </template>
-                </template>
-
-              </el-sub-menu>
-            </template> -->
             <SubItem :item="route" />
           </el-sub-menu>
         </template>

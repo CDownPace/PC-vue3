@@ -1,17 +1,31 @@
 <template>
-  <template v-for="routeChild in item.children" :key="routeChild.path" :item="routeChild">
-    <el-sub-menu :index="routeChild.path">
-      <template #title><span>{{ routeChild.meta.title }}</span></template>
+  <template v-if="!item.hidden">
+    <template v-if="!!item.children">
+      <template v-for="routeChild in item.children" :key="routeChild.path" :item="routeChild">
+        <el-sub-menu :index="routeChild.path">
+          <template #title>
+            <el-icon>
+              <component :is=routeChild?.meta.icon></component>
+            </el-icon>
+            <span>{{ routeChild.meta.title }}</span></template>
 
-      <template v-if="routeChild.children">
-        <!-- <template v-for="routeItem in routeChild.children" :key="routeItem.path" :item="routeChild">
+          <template v-if="!!routeChild.children">
+            <SubItem :item="routeChild" />
+          </template>
+          <template v-else>
+            <el-menu-item :index="routeChild.path">
+              <template #title>
+                <el-icon>
+                  <component :is=routeChild?.meta.icon></component>
+                </el-icon>
+                <span>{{ routeChild.meta.title }}</span></template>
+            </el-menu-item>
+          </template>
 
-                    <el-menu-item :index="routeItem?.path">{{ routeItem.meta.title }}</el-menu-item>
-                  </template> -->
-        <SubItem :item="routeChild" />
+        </el-sub-menu>
       </template>
+    </template>
 
-    </el-sub-menu>
   </template>
 </template>
 <script lang="ts" setup>

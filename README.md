@@ -8,4 +8,5 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ###  sideBar
 采用递归嵌套，循环查找路由里是否有子元素
 Sidebar/index.vue 文件里判断是否有children，使用SubItem子组建。
-SubItem组件再进行判断children,有的话调用自身，完成多层嵌套。
+SubItem组件再进行判断children,有的话调用自身，完成多层嵌套，没有的话使用“el-menu-item”，就没有下拉箭头，并且可以进行路由的跳转。
+

@@ -1,11 +1,4 @@
 /** When your routing table is too long, you can split it into small modules**/
-
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@element-plus/icons-vue'
 const allRouter = [
   {
     path: '/other',
@@ -14,7 +7,7 @@ const allRouter = [
     name: 'other',
     meta: {
       title: '旅游地点',
-      icon: Location,
+      icon: 'Location',
     },
     children: [
       {

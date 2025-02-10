@@ -7,6 +7,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 // 引入暗黑模式 element-plus 2.2 内置暗黑模式
 import 'element-plus/theme-chalk/dark/css-vars.css'
+import './permission'
 
 //全局引入，可以不用在页面单独引入
 import { registerElIcons } from '../src/plugins/Ellcons'

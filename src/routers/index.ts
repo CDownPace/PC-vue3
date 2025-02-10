@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory, Router } from 'vue-router'
 import Layout from '@/layout/index.vue'
+import sideBarRouter from './sideBarRouter'
 
 interface extendRoute {
   hidden?: boolean
@@ -34,7 +35,7 @@ export const constantRoutes: Array<RouteRecordRaw & extendRoute> = [
     ],
   },
 ]
-
+let allRouter = [...constantRoutes,...sideBarRouter]
 
 const router = createRouter({
   // history: createWebHistory(process.env.BASE_URL), // history

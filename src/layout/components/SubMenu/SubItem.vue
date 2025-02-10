@@ -15,10 +15,15 @@
           <template v-else>
             <el-menu-item :index="routeChild.path">
               <template #title>
-                <el-icon>
-                  <component :is=routeChild?.meta.icon></component>
-                </el-icon>
-                <span>{{ routeChild.meta.title }}</span></template>
+
+                <router-link :to="routeChild.path">
+                  <el-icon>
+                    <component :is=routeChild?.meta.icon></component>
+                  </el-icon>
+                  <span>{{ routeChild.meta.title }}</span>
+
+                </router-link>
+              </template>
             </el-menu-item>
           </template>
 

@@ -1,9 +1,33 @@
 /** When your routing table is too long, you can split it into small modules**/
 const allRouter = [
   {
+    path: '/',
+    component: () => import('@/layout/index.vue'),
+    name: 'home',
+    redirect: '/',
+    meta: {
+      title: '首页',
+      icon: 'House',
+    },
+    children: [
+      {
+        path: '/home',
+        component: () => import('@/views/home/index.vue'),
+        name: 'homePage',
+        meta: { title: '首页面', icon: 'MenuIcon' },
+      },
+      {
+        path: '/home/map',
+        component: () => import('../views/home/map.vue'),
+        name: 'mapPage',
+        meta: { title: '地理总览', icon: 'MenuIcon' },
+      },
+    ],
+  },
+  {
     path: '/other',
-    component: 'aa',
-    redirect: '/other/clipboard',
+    component: () => import('@/layout/index.vue'),
+    // redirect: '/other/clipboard',
     name: 'other',
     meta: {
       title: '旅游地点',
@@ -55,7 +79,7 @@ const allRouter = [
 
   {
     path: '/system',
-    component: 'bb',
+    component: () => import('@/layout/index.vue'),
     redirect: '/system/user',
     name: 'system',
     meta: {
@@ -70,7 +94,7 @@ const allRouter = [
         meta: { title: '数值记录', icon: 'MenuIcon' },
       },
     ],
-  }
+  },
 ]
 
 export default allRouter

@@ -8,7 +8,8 @@ import 'element-plus/dist/index.css'
 // 引入暗黑模式 element-plus 2.2 内置暗黑模式
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import './permission'
-
+// 引入全局组件布局
+import PageWrapLayout from '@/components/PageWrapLayout/index.vue'
 //全局引入，可以不用在页面单独引入
 import { registerElIcons } from '../src/plugins/Ellcons'
 
@@ -20,5 +21,6 @@ import { registerElIcons } from '../src/plugins/Ellcons'
 
 const app = createApp(App)
 app.use(ElementPlus)
+app.component('PageWrapLayout', PageWrapLayout)
 registerElIcons(app)
 app.use(router).mount('#app')

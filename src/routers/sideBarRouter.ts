@@ -18,7 +18,7 @@ const allRouter = [
       },
       {
         path: '/home/map',
-        component: () => import('../views/home/map.vue'),
+        component: () => import('@/views/home/map.vue'),
         name: 'mapPage',
         meta: { title: '地理总览', icon: 'MenuIcon' },
       },
@@ -27,8 +27,8 @@ const allRouter = [
   {
     path: '/other',
     component: () => import('@/layout/index.vue'),
-    // redirect: '/other/clipboard',
     name: 'other',
+    redirect: '/other/yunnan',
     meta: {
       title: '旅游地点',
       icon: 'Location',
@@ -36,38 +36,40 @@ const allRouter = [
     children: [
       {
         path: '/other/yunnan',
-        component: () => import('@/views/login/index.vue'),
+        component: () => import('@/views/login/book.vue'),
         name: 'clipboard',
         meta: { title: '云南', roles: ['other'], icon: 'MenuIcon' },
+        redirect: '/other/yunnan/dali',
         children: [
           {
-            path: '/system/dali',
-            component: () => import('@/views/errorPages/404.vue'),
-            name: 'user',
+            path: '/other/yunnan/dali',
+            component: () => import('@/views/login/index.vue'),
+            name: 'dali',
             meta: { title: '大理', icon: 'MenuIcon' },
           },
           {
-            path: '/system/liling',
+            path: '/other/liling',
             component: () => import('@/views/errorPages/404.vue'),
-            name: 'user',
+            name: 'lijiang',
             meta: { title: '丽江', icon: 'MenuIcon' },
             children: [
               {
-                path: '/system/lijiang/lijiangguzhen',
+                path: '/other/lijiang/lijiangguzhen',
                 component: () => import('@/views/errorPages/404.vue'),
-                name: 'user',
+                name: 'gucheng',
                 meta: { title: '丽江古城', icon: 'MenuIcon' },
               },
               {
-                path: '/system/lijiang/shuhe',
+                path: '/other/lijiang/shuhe',
                 component: () => import('@/views/errorPages/404.vue'),
-                name: 'user',
+                name: 'shuhe',
                 meta: { title: '束河古镇', icon: 'MenuIcon' },
               },
             ]
           },
         ]
       },
+
       {
         path: '/other/editor',
         component: () => import('@/views/home/index.vue'),
@@ -76,7 +78,6 @@ const allRouter = [
       },
     ],
   },
-
   {
     path: '/system',
     component: () => import('@/layout/index.vue'),

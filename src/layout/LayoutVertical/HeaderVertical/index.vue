@@ -1,19 +1,19 @@
 <template>
-  <div class="footer-layout">
-    <span href="/" target="_blank"> 旅行页面</span>
+  <div class="header-layout">
+    <div class="nav-wrap">
+      <el-icon :size="20"><expand /></el-icon>
+      <span href="/" target="_blank" >
+        系统导航栏
+      </span>
+    </div>
+    <div class="user-warp">
+      <!-- <el-icon  :size="20" color="#000000"><User /></el-icon> -->
+      <el-icon :size="20" color="#000000"><UserFilled /></el-icon>
+      <span style="padding-left: 5px;">身份信息</span>
+    </div>
   </div>
 </template>
 
-<style>
-  .footer-layout {
-    height: 40px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border-top: 1px solid #e4e7ed;
-    flex-shrink: 0;
-    color: rgba(0, 0, 0, 0.45);
-  }
+<style lang="scss" scoped>
+@use './index.scss';
 </style>

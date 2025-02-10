@@ -10,3 +10,8 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 Sidebar/index.vue 文件里判断是否有children，使用SubItem子组建。
 SubItem组件再进行判断children,有的话调用自身，完成多层嵌套，没有的话使用“el-menu-item”，就没有下拉箭头，并且可以进行路由的跳转。
 
+### 共通
+页面模块中大多数有一个最外层的padding。方法是写一个全局组件，用slot做对外的口，有padding的页面先引组件----  PageWrapLayout
+
+### 问题
+本代码引入scss需用@use代替@import

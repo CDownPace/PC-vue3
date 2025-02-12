@@ -28,7 +28,7 @@ export const constantRoutes: Array<RouteRecordRaw & extendRoute> = [
     children: [
       {
         path: '/home',
-        component: () => import('../views/home/index.vue'),
+        component: () => import('../views/home/map.vue'),
         name: 'home',
         meta: { title: '首页', icon: 'House', affix: true, role: ['other'] },
       },

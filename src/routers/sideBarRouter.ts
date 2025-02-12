@@ -12,13 +12,13 @@ const allRouter = [
     children: [
       {
         path: '/home',
-        component: () => import('@/views/home/index.vue'),
+        component: () => import('@/views/home/map.vue'),
         name: 'homePage',
         meta: { title: '首页面', icon: 'MenuIcon' },
       },
       {
         path: '/home/map',
-        component: () => import('@/views/home/map.vue'),
+        component: () => import('@/views/home/index.vue'),
         name: 'mapPage',
         meta: { title: '地理总览', icon: 'MenuIcon' },
       },

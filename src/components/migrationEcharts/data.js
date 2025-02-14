@@ -1,3 +1,32 @@
+import heilongjiang from '../../mock/map/heilongjiang.json'
+import taiwan from '../../mock/map/taiwan.json'
+import neimenggu from '../../mock/map/neimenggu.json'
+import jilin from '../../mock/map/jilin.json'
+import liaoning from '../../mock/map/liaoning.json'
+import hebei from '../../mock/map/hebei.json'
+import shanxi from '../../mock/map/shanxi.json'
+import shaanxi from '../../mock/map/shaanxi.json'
+import gansu from '../../mock/map/gansu.json'
+import ningxia from '../../mock/map/ningxia.json'
+import qinghai from '../../mock/map/qinghai.json'
+import xinjiang from '../../mock/map/xinjiang.json'
+import xizang from '../../mock/map/xizang.json'
+import sichuan from '../../mock/map/sichuan.json'
+import chongqing from '../../mock/map/chongqing.json'
+import shandong from '../../mock/map/shandong.json'
+import henan from '../../mock/map/henan.json'
+import jiangsu from '../../mock/map/jiangsu.json'
+import anhui from '../../mock/map/anhui.json'
+import hubei from '../../mock/map/hubei.json'
+import zhejiang from '../../mock/map/zhejiang.json'
+import fujian from '../../mock/map/fujian.json'
+import jiangxi from '../../mock/map/jiangxi.json'
+import hunan from '../../mock/map/hunan.json'
+import guizhou from '../../mock/map/guizhou.json'
+import yunnan from '../../mock/map/yunnan.json'
+import guangdong from '../../mock/map/guangdong.json'
+// import guangxi from '../../mock/map/guangxi.json'
+
 export const cityIconData = [
   {
     adcode: 650000,
@@ -42,8 +71,8 @@ export const colors = '#f9b207';
 
 export const geoCoordMap = {
   //地名跟坐标
-  '台湾': [120,23],
-  '黑龙江': [128,48],
+  '台湾': [120, 23],
+  '黑龙江': [128, 48],
   '内蒙古': [110.3467, 41.4899],
   "吉林": [125.8154, 44.2584],
   '北京市': [116.4551, 40.2539],
@@ -56,7 +85,7 @@ export const geoCoordMap = {
   "宁夏": [106.3586, 38.1775],
   "青海": [97.4038, 36.8207],
   "新疆": [87.9236, 43.5883],
-  "西藏": [88.388277,31.56375],
+  "西藏": [88.388277, 31.56375],
   "四川": [103.9526, 30.7617],
   "重庆": [108.384366, 30.439702],
   "山东": [117.1582, 36.8701],
@@ -110,5 +139,120 @@ export const value = {
   江西: 10000
 
 }
+
+//引入区域地图
+export const regionMap = [{
+  title: '黑龙江',
+  name: 'heilongjiang',
+  value: heilongjiang
+}, {
+  title: '台湾',
+  name: 'taiwan',
+  value: taiwan
+}, {
+  title: '内蒙古',
+  name: 'neimenggu',
+  value: neimenggu
+}, {
+  title: '吉林',
+  name: 'jilin',
+  value: jilin
+}, {
+  title: '辽宁',
+  name: 'liaoning',
+  value: liaoning
+}, {
+  title: '河北',
+  name: 'hebei',
+  value: hebei
+}, {
+  title: '山西',
+  name: 'shanxi',
+  value: shanxi
+}, {
+  title: '陕西',
+  name: 'shaanxi',
+  value: shaanxi
+}, {
+  title: '甘肃',
+  name: 'gansu',
+  value: gansu
+}, {
+  title: '宁夏',
+  name: 'ningxia',
+  value: ningxia
+}, {
+  title: '青海',
+  name: 'qinghai',
+  value: qinghai
+}, {
+  title: '新疆',
+  name: 'xinjiang',
+  value: xinjiang
+}, {
+  title: '西藏',
+  name: 'xizang',
+  value: xizang
+}, {
+  title: '四川',
+  name: 'sichuan',
+  value: sichuan
+}, {
+  title: '重庆',
+  name: 'chongqing',
+  value: chongqing
+}, {
+  title: '山东',
+  name: 'shandong',
+  value: shandong
+}, {
+  title: '河南',
+  name: 'henan',
+  value: henan
+}, {
+  title: '江苏',
+  name: 'jiangsu',
+  value: jiangsu
+}, {
+  title: '安徽',
+  name: 'anhui',
+  value: anhui
+}, {
+  title: '湖北',
+  name: 'hubei',
+  value: hubei
+}, {
+  title: '浙江',
+  name: 'zhejiang',
+  value: zhejiang
+}, {
+  title: '福建',
+  name: 'fujian',
+  value: fujian
+}, {
+  title: '江西',
+  name: 'jiangxi',
+  value: jiangxi
+}, {
+  title: '湖南',
+  name: 'hunan',
+  value: hunan
+}, {
+  title: '贵州',
+  name: 'guizhou',
+  value: guizhou
+}, {
+  title: '云南',
+  name: 'yunnan',
+  value: yunnan
+}, {
+  title: '广东',
+  name: 'guangdong',
+  value: guangdong
+}, {
+  title: '广西',
+  name: 'guangxi',
+  value: 'guangxi'
+}]
 
 export const geoGpsMap = [123.1238, 42.1216]

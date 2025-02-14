@@ -12,5 +12,6 @@
     width: 100%;
     box-sizing: border-box;
     background-color: rgb(244, 245, 245);
+    flex-direction: column;
   }
 </style>

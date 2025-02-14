@@ -1,0 +1,293 @@
+[{
+  "en": "beijing",
+  "ch": "北京市"
+},
+{
+  "en": "shanghai",
+  "ch": "上海市"
+},
+{
+  "en": "tianjin",
+  "ch": "天津市"
+},
+{
+  "en": "chongqing",
+  "ch": "重庆市"
+},
+{
+  "en": "haerbin",
+  "ch": "哈尔滨市"
+},
+{
+  "en": "changchun",
+  "ch": "长春市"
+},
+{
+  "en": "shenyang",
+  "ch": "沈阳市"
+},
+{
+  "en": "huhehaote",
+  "ch": "呼和浩特市"
+},
+{
+  "en": "shijiazhuang",
+  "ch": "石家庄市"
+},
+{
+  "en": "wulumuqi",
+  "ch": "乌鲁木齐市"
+},
+{
+  "en": "lanzhou",
+  "ch": "兰州市"
+},
+{
+  "en": "xining",
+  "ch": "西宁市"
+},
+{
+  "en": "xian",
+  "ch": "西安市"
+},
+{
+  "en": "yinchuan",
+  "ch": "银川市"
+},
+{
+  "en": "zhengzhou",
+  "ch": "郑州市"
+},
+{
+  "en": "jinan",
+  "ch": "济南市"
+},
+{
+  "en": "taiyuan",
+  "ch": "太原市"
+},
+{
+  "en": "hefei",
+  "ch": "合肥市"
+},
+{
+  "en": "wuhan",
+  "ch": "武汉市"
+},
+{
+  "en": "changsha",
+  "ch": "长沙市"
+},
+{
+  "en": "nanjing",
+  "ch": "南京市"
+},
+{
+  "en": "chengdu",
+  "ch": "成都市"
+},
+{
+  "en": "guiyang",
+  "ch": "贵阳市"
+},
+{
+  "en": "kunming",
+  "ch": "昆明市"
+},
+{
+  "en": "nanning",
+  "ch": "南宁市"
+},
+{
+  "en": "lasa",
+  "ch": "拉萨市"
+},
+{
+  "en": "hangzhou",
+  "ch": "杭州市"
+},
+{
+  "en": "fuzhou",
+  "ch": "福州市"
+},
+{
+  "en": "guangzhou",
+  "ch": "广州市"
+},
+{
+  "en": "haikou",
+  "ch": "海口市"
+},
+{
+  "en": "dali",
+  "ch": "大理白族自治州"
+},
+{
+  "en": "lijiang",
+  "ch": "丽江市"
+},
+{
+  "en": "suzhou",
+  "ch": "苏州市"
+},
+{
+  "en": "wuxi",
+  "ch": "无锡市"
+},
+{
+  "en": "ningbo",
+  "ch": "宁波市"
+},
+{
+  "en": "qingdao",
+  "ch": "青岛市"
+},
+{
+  "en": "dalian",
+  "ch": "大连市"
+},
+{
+  "en": "xiamen",
+  "ch": "厦门市"
+},
+{
+  "en": "shenzhen",
+  "ch": "深圳市"
+},
+{
+  "en": "zhuhai",
+  "ch": "珠海市"
+},
+{
+  "en": "shantou",
+  "ch": "汕头市"
+},
+{
+  "en": "foshan",
+  "ch": "佛山市"
+},
+{
+  "en": "dongguan",
+  "ch": "东莞市"
+},
+{
+  "en": "zhongshan",
+  "ch": "中山市"
+},
+{
+  "en": "quanzhou",
+  "ch": "泉州市"
+},
+{
+  "en": "yantai",
+  "ch": "烟台市"
+},
+{
+  "en": "weihai",
+  "ch": "威海市"
+},
+{
+  "en": "changzhou",
+  "ch": "常州市"
+},
+{
+  "en": "nantong",
+  "ch": "南通市"
+},
+{
+  "en": "yangzhou",
+  "ch": "扬州市"
+},
+{
+  "en": "zhenjiang",
+  "ch": "镇江市"
+},
+{
+  "en": "taizhou",
+  "ch": "泰州市"
+},
+{
+  "en": "wenzhou",
+  "ch": "温州市"
+},
+{
+  "en": "jiaxing",
+  "ch": "嘉兴市"
+},
+{
+  "en": "huzhou",
+  "ch": "湖州市"
+},
+{
+  "en": "shaoxing",
+  "ch": "绍兴市"
+},
+{
+  "en": "jinhua",
+  "ch": "金华市"
+},
+{
+  "en": "quzhou",
+  "ch": "衢州市"
+},
+{
+  "en": "zhoushan",
+  "ch": "舟山市"
+},
+{
+  "en": "taizhou",
+  "ch": "台州市"
+},
+{
+  "en": "lishui",
+  "ch": "丽水市"
+},
+{
+  "en": "hegang",
+  "ch": "鹤岗市"
+},
+{
+  "en": "shuangyashan",
+  "ch": "双鸭山市"
+},
+{
+  "en": "jixi",
+  "ch": "鸡西市"
+},
+{
+  "en": "qitaihe",
+  "ch": "七台河市"
+},
+{
+  "en": "yichun",
+  "ch": "伊春市"
+},
+{
+  "en": "jiamusi",
+  "ch": "佳木斯市"
+},
+{
+  "en": "qiqihar",
+  "ch": "齐齐哈尔市"
+},
+{
+  "en": "daqing",
+  "ch": "大庆市"
+},
+{
+  "en": "mudanjiang",
+  "ch": "牡丹江市"
+},
+{
+  "en": "suihua",
+  "ch": "绥化市"
+},
+{
+  "en": "heihe",
+  "ch": "黑河市"
+},
+{
+  "en": "daxinganling",
+  "ch": "大兴安岭地区"
+}
+]

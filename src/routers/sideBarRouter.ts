@@ -12,13 +12,13 @@ const allRouter = [
     children: [
       {
         path: '/home',
-        component: () => import('@/views/home/map.vue'),
+        component: () => import('@/views/home/index.vue'),
         name: 'homePage',
         meta: { title: '首页面', icon: 'MenuIcon' },
       },
       {
         path: '/home/map',
-        component: () => import('@/views/home/index.vue'),
+        component: () => import('@/views/home/map.vue'),
         name: 'mapPage',
         meta: { title: '地理总览', icon: 'MenuIcon' },
       },
@@ -36,14 +36,14 @@ const allRouter = [
     children: [
       {
         path: '/other/yunnan',
-        component: () => import('@/views/login/book.vue'),
+        component: () => import('@/views/travel/yunnan/dali/index.vue'),
         name: 'clipboard',
         meta: { title: '云南', roles: ['other'], icon: 'MenuIcon' },
         redirect: '/other/yunnan/dali',
         children: [
           {
             path: '/other/yunnan/dali',
-            component: () => import('@/views/login/index.vue'),
+            component: () => import('@/views/travel/yunnan/dali/index.vue'),
             name: 'dali',
             meta: { title: '大理', icon: 'MenuIcon' },
           },
